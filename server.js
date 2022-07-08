@@ -7,6 +7,7 @@ const bollywoodRoute = require('./routes/bollywoodRoute.js');
 const newreleasesRoute = require('./routes/newreleaseRoute');
 const hollywoodRoute = require('./routes/hollywoodRoute');
 const webseriesRoute = require('./routes/webseriesRoute')
+const sliderRoute = require('./routes/sliderRoute')
 
  
 //Create DB Connection
@@ -25,9 +26,10 @@ app.use('/api/bollywoods/', bollywoodRoute);
 app.use('/api/newreleases',newreleasesRoute)
 app.use('/api/hollywoods',hollywoodRoute)
 app.use('/api/webseries',webseriesRoute)
+app.use('/api/sliders',sliderRoute)
 
 
-
+ 
 app.get("/", (req, res) => {
     res.send("Server in running!");
 });

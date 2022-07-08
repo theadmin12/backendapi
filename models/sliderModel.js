@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const newreleaseSchema = new mongoose.Schema(
+const sliderSchema = new mongoose.Schema(
   {
     name: { type: String, require },
     image: { type: String, require },
@@ -12,7 +12,7 @@ const newreleaseSchema = new mongoose.Schema(
   {
     timestamps: true, //add date
   }
-); 
+);
 
-const newreleaseModel = mongoose.model('newreleases', newreleaseSchema);
-module.exports = newreleaseModel;
+const sliderModel = mongoose.model('sliders', sliderSchema);
+module.exports = sliderModel;
