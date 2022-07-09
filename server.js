@@ -12,7 +12,7 @@ const sliderRoute = require('./routes/sliderRoute')
 
  
 //Create DB Connection
-const MONGODB_URI = process.env.MONGO_URL;
+const MONGODB_URI = "mongodb+srv://admin:adminmovie@cluster0.bt2gtmm.mongodb.net/movie?retryWrites=true&w=majority";
 mongoose.connect(MONGODB_URI).then(() => {
     console.log('Connected to DB');
 }).catch((err) => {
