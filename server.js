@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors")
 const app = express();
-require('dotenv').config()
+var dotenv = require('dotenv');
+dotenv.config();
 
 const bollywoodRoute = require('./routes/bollywoodRoute.js');
 const newreleasesRoute = require('./routes/newreleaseRoute');
@@ -12,8 +13,8 @@ const sliderRoute = require('./routes/sliderRoute')
 
  
 //Create DB Connection
-const MONGODB_URI = "mongodb+srv://admin:adminmovie@cluster0.bt2gtmm.mongodb.net/movie?retryWrites=true&w=majority";
-mongoose.connect(MONGODB_URI).then(() => {
+
+mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log('Connected to DB');
 }).catch((err) => {
     console.log(err.message);
