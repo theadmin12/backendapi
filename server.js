@@ -31,9 +31,6 @@ app.use('/api/sliders',sliderRoute)
 
 
  
-app.get("/", (req, res) => {
-    res.send("Server in running!");
-});
 
 const port = process.env.PORT || 5000;
 
